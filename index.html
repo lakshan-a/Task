@@ -66,6 +66,12 @@
     document.getElementById("btn1").addEventListener("click",function (){
         document.querySelector("h1").style.color='red'
     });
+
+    document.querySelector('#btn2').addEventListener("click",function(){
+        document.querySelector('#img').style.backgroundImage = "url("+document.querySelector('#url').value+")";
+    });
+
+
     //Case One
     //Bind an event for Change Text Btn
     //Get Input Text Value
