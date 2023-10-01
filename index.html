@@ -8,8 +8,9 @@
 <body>
 <section class="container mt-5">
     <h1 id="h1ID">What is BOM & What is DOM</h1>
-    <h2>What really JS DO?</h2>
-    <h2>What really JS DO?</h2>
+    <h1 class="h1Class">What is BOM & What is DOM</h1>
+    <h2 id="h2ID">What really JS DO?</h2>
+    <h2 class="h1Class">What really JS DO?</h2>
     <hr>
     <input class="form-control" type="text" name="cusName">
     <button class="btn btn-danger mt-3">Test</button>
@@ -28,8 +29,12 @@
     document.querySelector("css_selector");//will return a single element
     document.querySelectorAll("css_selector");//will return a list
 
-    document.getElementById("h1ID").addEventListener("click", function() {
-        document.querySelector("#h1ID").remove();
+    // document.getElementById("h1ID").addEventListener("click", function() {
+    //     document.querySelector("#h1ID").remove();
+    // });
+
+    document.querySelector('button').addEventListener("click",function(){
+        document.querySelector('.h1Class').innerText = document.querySelector('input').value;
     });
 
 </script>
