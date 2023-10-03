@@ -215,35 +215,35 @@
     var txt = document.querySelector("#txt");
     var h1 = document.querySelector("#display");
 
-    let interval;
+    let timer;
 
     btnStrt.addEventListener("click", function () {
         let currentNum = parseInt(txt.value);
 
         if (currentNum === 0) {
-            interval = setInterval(function () {
+            timer = setInterval(function () {
                 let currentNum = h1.innerText;
                 h1.innerText = parseInt(currentNum) + 1;
-            }, 1000);
+            }, 550);
         } else {
-            interval = setInterval(function () {
+            timer = setInterval(function () {
                 currentNum += 1;
                 h1.innerText = currentNum;
-            }, 1000);
+            }, 550);
         }
     });
 
     btnStop.addEventListener("click", function () {
-        clearInterval(interval);
+        clearInterval(timer);
     });
 
     btnMin.addEventListener("click", function () {
-        clearInterval(interval)
+        clearInterval(timer)
         h1.innerText = parseInt(h1.innerText) - 1;
     });
 
     btnUp.addEventListener("click", function () {
-        clearInterval(interval);
+        clearInterval(timer);
         h1.innerText = parseInt(h1.innerText) + 1;
     });
 
